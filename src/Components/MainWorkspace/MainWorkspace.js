@@ -14,7 +14,7 @@ const MainWorkspace = () => {
   const [tagVisibility, setTagVisibility] = React.useState(false)
 
   React.useEffect(() => {
-    const url = "http://0.0.0.0:8000/api/" + myContext.currentFile
+    const url = "http://13.233.94.116:8000/api/" + myContext.currentFile
     axios.get(url).then(response => {
       setFileData(response.data)
       myContext.setFileObj(response.data)

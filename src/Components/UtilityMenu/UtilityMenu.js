@@ -16,7 +16,7 @@ const UtilityMenu = () => {
   const searchHandler = () => {
     setSearchTerm(textInput.current.value)
     axios
-      .get("http://0.0.0.0:8000/api/search/" + myContext.currentFile + "/" + textInput.current.value)
+      .get("http://13.233.94.116:8000/api/search/" + myContext.currentFile + "/" + textInput.current.value)
       .then(
         response => {
           setSearchResult(response.data.results)
