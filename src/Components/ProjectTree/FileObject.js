@@ -21,7 +21,7 @@ const FileObject = ({ fileName }) => {
   };
 
   return fileName === myContext.currentFile ? (
-    <div className="container inline-flex flex-row relative bg-gray-300">
+    <div className="container inline-flex flex-row relative bg-white border rounded-tl-2xl rounded-bl-2xl">
       <div
         className="container flex p-5 text-center text-xl "
         onClick={fileHandler}
@@ -49,7 +49,7 @@ const FileObject = ({ fileName }) => {
       </div>
     </div>
   ) : (
-    <div className="container inline-flex flex-row relative">
+    <div className="container inline-flex flex-row relative bg-indigo-300">
       <div className="container p-5 self-center text-xl" onClick={fileHandler}>
         {fileName}
       </div>

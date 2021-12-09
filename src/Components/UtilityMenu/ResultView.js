@@ -10,8 +10,8 @@ const ResultView = ({ results_object }) => {
     <div className="container">
       {
         results_object[1].Tag_Results.length !== 0 ?
-          <div className="container">
-            <p className="p-3 text-xl text-center font-bold border-b">
+          <div className="container bg-indigo-300">
+            <p className="p-3 text-xl text-center font-bold">
               Tag Results
             </p>
             <div className="container overflow-auto">
@@ -32,8 +32,8 @@ const ResultView = ({ results_object }) => {
       }
       {
         results_object[2].Subtag_Results.length !== 0 ?
-          <div className="container">
-            <p className="p-3 text-xl text-center font-bold border-b">
+          <div className="container bg-indigo-300">
+            <p className="p-3 text-xl text-center font-bold">
               Subtag Results
             </p>
             <div className="container overflow-auto">

@@ -13,7 +13,7 @@ const SubtagObject = ({ subtag_object }) => {
 
   return (
     <div onClick={setSearchObj}>
-      <p className="text-center p-2 border-b">
+      <p className="text-center p-2 border-b border-indigo-400 bg-indigo-500">
         {subtag_object.subtag_name} : {subtag_object.subtag_value}
       </p>
     </div>

@@ -34,7 +34,7 @@ const FileView = ({ file_text, search_obj, tag_vis }) => {
 
   return (
     <div className="container py-20 px-40 max-w-auto">
-      <div className="container text-center text-xl leading-relaxed bg-white p-24 break-words">
+      <div className="container border border-black text-center text-xl leading-relaxed bg-white p-24 break-words">
         {
           fileText
             .map(
@@ -44,7 +44,7 @@ const FileView = ({ file_text, search_obj, tag_vis }) => {
                     .map(
                       line => {
                         return (
-                          <p className="has-text-centered is-size-4" style={{ backgroundColor: index === 1 ? 'grey' : 'white' }}>
+                          <p className="has-text-centered is-size-4" style={{ backgroundColor: index === 1 ? '#818cf8' : 'white' }}>
                             {line}
                           </p>
                         )

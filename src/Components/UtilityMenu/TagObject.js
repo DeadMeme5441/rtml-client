@@ -8,15 +8,15 @@ const TagObject = ({ tag_object }) => {
   const [minimize, setMinimize] = React.useState(false)
 
   return (
-    <div className="flex flex-col border border-gray-400">
+    <div className="flex flex-col bg-indigo-300">
       <div onClick={() => setMinimize(!minimize)}>
-        <p className="flex-grow text-xl p-2 pl-6 border-b-2 border-gray-300">
+        <p className="flex-grow text-xl p-2 pl-6">
           {tag_object.tag_name}
         </p>
       </div>
       {
         minimize ?
-          <div className="container">
+          <div className="container p-2">
             {
               tag_object.subtags_list.map(
                 subtag => {

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import FileContext from "./Components/FileContext"
 
 import ProjectTree from './Components/ProjectTree/ProjectTree'

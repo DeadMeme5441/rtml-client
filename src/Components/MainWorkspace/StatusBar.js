@@ -1,21 +1,19 @@
 import React from 'react';
 
-import FileContext from '../FileContext'
-
 const StatusBar = ({ errors }) => {
 
-  const myContext = React.useContext(FileContext)
-  console.log(errors)
-
   return(
-    <div className="p-3 border-t-2 border-black bg-white">
+    <div className="flex flex-row p-3 bg-indigo-300 font-bold">
     {
       errors.value === false ?
-        <div> No Errors.</div> :
-      <div>There are errors.</div>
+        <div className="flex container"> No Errors.</div> :
+      <div className="flex container">There are errors.</div>
     }
+      <div className="flex container flex-row">
+      <div className="flex container text-right"> Tag Errors : {errors.tag_errors.length}</div>
+      <div className="flex container text-right"> Subtag Errors : {errors.subtag_errors.length}</div>
+      </div>
     </div>
-
   )
 
 };
