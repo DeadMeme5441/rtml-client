@@ -33,8 +33,8 @@ const FileView = ({ file_text, search_obj, tag_vis }) => {
   )
 
   return (
-    <div className="container py-20 px-40">
-      <div className="container text-center text-xl leading-relaxed bg-white p-24">
+    <div className="container py-20 px-40 max-w-auto">
+      <div className="container text-center text-xl leading-relaxed bg-white p-24 break-words">
         {
           fileText
             .map(
@@ -55,7 +55,7 @@ const FileView = ({ file_text, search_obj, tag_vis }) => {
             )
         }
       </div>
-    </div >
+    </div>
   )
 };
 

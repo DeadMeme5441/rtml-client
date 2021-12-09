@@ -4,6 +4,7 @@ import axios from 'axios'
 import FileContext from '../FileContext'
 
 import Upload from './Upload'
+import FileObject from './FileObject'
 
 const ProjectTree = () => {
 
@@ -12,16 +13,13 @@ const ProjectTree = () => {
 
   React.useEffect(() => {
     if (uploaded === true) {
-      axios.get("http://13.233.94.116:8000/files").then(response => {
+      axios.get("http://localhost:8000/files").then(response => {
         myContext.setFiles(response.data.files)
       })
       setUploaded(false)
     }
   }, [uploaded, myContext])
 
-  const fileHandler = (e) => {
-    myContext.setCurrentFile(e.target.textContent)
-  }
 
   const reloadTree = () => {
     if (!uploaded) setUploaded(true)
@@ -36,16 +34,10 @@ const ProjectTree = () => {
         myContext.files ?
           myContext.files.map(file => {
             return (
-              file === myContext.currentFile ?
-                <div className="container p-5 text-center text-xl bg-gray-300" onClick={fileHandler}>
-                  {file}
-                </div> :
-                <div className="container p-5 text-center text-xl" onClick={fileHandler}>
-                  {file}
-                </div>
+              <FileObject fileName={file}/>
             )
           }) :
-          <div>No files loaded.</div>
+          <div className="items-center">No files loaded.</div>
       }
       <div className="container absolute bottom-0">
         <Upload />

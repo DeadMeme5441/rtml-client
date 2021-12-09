@@ -4,6 +4,7 @@ import axios from 'axios'
 import FileContext from '../FileContext'
 
 import FileView from './FileView'
+import StatusBar from './StatusBar'
 import UtilityMenu from "../UtilityMenu/UtilityMenu"
 
 const MainWorkspace = () => {
@@ -14,11 +15,13 @@ const MainWorkspace = () => {
   const [tagVisibility, setTagVisibility] = React.useState(false)
 
   React.useEffect(() => {
-    const url = "http://13.233.94.116:8000/api/" + myContext.currentFile
+    if(myContext.currentFile !== null){
+    const url = "http://localhost:8000/api/" + myContext.currentFile
     axios.get(url).then(response => {
       setFileData(response.data)
       myContext.setFileObj(response.data)
     })
+    }
   }, [myContext.currentFile])
 
   if (!fileData) return (
@@ -49,6 +52,9 @@ const MainWorkspace = () => {
         </div>
         <div className="overflow-auto">
           <FileView file_text={fileData.file_data} search_obj={myContext.searchObj} tag_vis={tagVisibility} />
+        </div>
+        <div>
+    <StatusBar errors = { fileData.errors }/>
         </div>
       </div >
       <div className="w-3/12 h-screen">
