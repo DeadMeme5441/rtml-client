@@ -22,16 +22,16 @@ const UtilityMenu = () => {
   };
 
   return (
-    <div className="flex-none flex-col h-screen max-h-screen bg-indigo-300">
-      <div className="flex p-4 bg-indigo-300">
+    <div className="flex-none flex-col h-screen max-h-screen bg-Navy">
+      <div className="flex p-4 bg-Navy pt-20">
         <input
-          class="w-full p-2 bg-indigo-200 rounded-l-lg"
+          class="w-full p-2 bg-Vintage rounded-l-lg"
           type="text"
           placeholder="Search..."
           ref={textInput}
         />
         <button
-          class="w-auto flex justify-end items-center text-gray-500 p-2 hover:text-black bg-indigo-200 rounded-r-lg"
+          class="w-auto flex justify-end items-center text-Navy p-2 hover:text-black bg-Orange rounded-r-lg"
           onClick={searchHandler}
         >
           <svg
@@ -60,24 +60,20 @@ const UtilityMenu = () => {
       </div>
       <div className="container bottom-0 h-2/6 overflow-auto">
         <div>
-
           {myContext.searchObj ? (
-            <div>
-          <p className="p-3 text-xl text-center font-bold">
-            Search Preview
-          </p>
-            <div className="text-center p-3 pt-5">
-              {myContext.fileObj.file_data
-                .substring(
-                  myContext.searchObj.subtag_start,
-                  myContext.searchObj.subtag_end
-                )
-                .split("\n")
-                .map((line) => {
-                  return <p className="leading-relaxed">{line}</p>;
-                })}
+            <div className="bg-Vintage mx-2 rounded-lg">
+              <div className="text-center p-3 pt-5">
+                {myContext.fileObj.file_data
+                  .substring(
+                    myContext.searchObj.subtag_start,
+                    myContext.searchObj.subtag_end
+                  )
+                  .split("\n")
+                  .map((line) => {
+                    return <p className="leading-relaxed">{line}</p>;
+                  })}
+              </div>
             </div>
-</div>
           ) : (
             <></>
           )}

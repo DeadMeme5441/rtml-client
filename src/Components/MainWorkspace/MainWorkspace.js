@@ -27,12 +27,12 @@ const MainWorkspace = () => {
     return (
       <div className="flex flex-col container max-w-9/12 h-screen relative">
         {" "}
-        <div className="flex flex-row p-5 bg-indigo-300">
+        <div className="flex flex-row p-5 bg-Navy">
           {" "}
           <div className="text-left text-bold text-2xl"> Navbar. </div>
         </div>
-        <div className="container pt-80">
-          <p className="text-gray-500 text-center font-bold text-3xl">
+        <div className="container pt-80 bg-Vintage h-screen">
+          <p className="text-gray-500 text-center font-bold text-3xl bg-Vintage">
             Choose a file from the sidebar to your left.
           </p>
         </div>
@@ -41,8 +41,8 @@ const MainWorkspace = () => {
 
   return (
     <div className="flex flex-row">
-      <div className="flex flex-col container bg-white h-screen">
-        <div className="flex flex-row p-5 bg-indigo-300 relative">
+      <div className="flex flex-col container bg-Vintage h-screen">
+        <div className="flex flex-row p-5 bg-Navy relative">
           <div className="flex p-4">
             <label class="absolute items-center m-6 inset-y-0 left-0 ml-10">
               <input
@@ -50,7 +50,7 @@ const MainWorkspace = () => {
                 class="form-checkbox h-5 w-5 bg-white"
                 onChange={() => setTagVisibility(!tagVisibility)}
               />
-              <span class="ml-2 text-black">Show tags.</span>
+              <span class="ml-2 text-Vintage">Show tags.</span>
             </label>
           </div>
         </div>

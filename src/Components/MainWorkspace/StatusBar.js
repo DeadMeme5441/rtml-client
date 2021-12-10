@@ -3,7 +3,7 @@ import React from 'react';
 const StatusBar = ({ errors }) => {
 
   return(
-    <div className="flex flex-row p-3 bg-indigo-300 font-bold">
+    <div className="flex flex-row p-3 bg-Navy font-bold text-Vintage">
     {
       errors.value === false ?
         <div className="flex container"> No Errors.</div> :

@@ -24,12 +24,12 @@ const ProjectTree = () => {
   };
 
   return (
-    <div className="relative container flex-none flex-col h-screen items-center  w-2/12 bg-indigo-300">
+    <div className="relative container flex-none flex-col h-screen items-center  w-2/12 bg-Navy">
       <div className="flex flex-row">
-        <div className="container p-5 text-left text-bold text-2xl ml-5">
+        <div className="container p-5 text-left text-bold text-2xl ml-5 text-Vintage">
           Files
         </div>
-        <div className="flex p-5 mt-1" onClick={reloadTree}>
+        <div className="flex p-5 mt-1 text-Vintage" onClick={reloadTree}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -51,7 +51,7 @@ const ProjectTree = () => {
           return <FileObject fileName={file} />;
         })
       ) : (
-        <div className="items-center">No files loaded.</div>
+        <div className="text-center pt-5">No files loaded.</div>
       )}
       <div className="container absolute bottom-0 pb-6">
         <Upload />

@@ -30,7 +30,7 @@ const Upload = () => {
     <div>
       <button
         onClick={handleClick}
-        className="ml-7 mb-6 p-3 bg-indigo-700 text-center text-lg w-4/5 rounded-lg shadow-md"
+        className="ml-7 mb-6 p-3 bg-Orange text-center text-lg w-4/5 rounded-lg shadow-md"
       >
         Upload File
       </button>
