@@ -1,10 +1,14 @@
 import React from 'react';
 
+import FileContext from "../FileContext";
+
 const FileView = ({ file_text, search_obj, tag_vis }) => {
 
   const [text, setText] = React.useState(file_text)
   const [condition, setCondition] = React.useState('')
   const [fileText, setFileText] = React.useState(null)
+
+  const myContext = React.useContext(FileContext)
 
   React.useEffect(() => {
     if (tag_vis) {
@@ -22,7 +26,7 @@ const FileView = ({ file_text, search_obj, tag_vis }) => {
       setFileText([text])
     }
 
-  }, [file_text, tag_vis, search_obj, text])
+  }, [file_text, tag_vis, search_obj, text, myContext.currentFile])
 
   if (!fileText) return (
     <div className="container py-20 px-40">

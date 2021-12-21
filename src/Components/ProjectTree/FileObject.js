@@ -49,7 +49,7 @@ const FileObject = ({ fileName }) => {
       </div>
     </div>
   ) : (
-    <div className="container inline-flex flex-row relative bg-Vintage">
+    <div className="container inline-flex flex-row relative bg-Navy text-Vintage">
       <div className="container p-5 self-center text-xl" onClick={fileHandler}>
         {fileName}
       </div>

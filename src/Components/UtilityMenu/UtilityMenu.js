@@ -58,7 +58,7 @@ const UtilityMenu = () => {
           <div></div>
         )}
       </div>
-      <div className="container bottom-0 h-2/6 overflow-auto">
+      <div className="container bottom-0 h-2/6 overflow-auto mt-4">
         <div>
           {myContext.searchObj ? (
             <div className="bg-Vintage mx-2 rounded-lg">
