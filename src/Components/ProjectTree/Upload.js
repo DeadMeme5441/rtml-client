@@ -14,7 +14,7 @@ const Upload = () => {
   };
 
   function uploadHandler(upfile) {
-    const url = "http://0.0.0.0:8000/file/upload";
+    const url = "http://13.233.94.116:8000/file/upload";
     const formData = new FormData();
 
     formData.append("file", upfile);
