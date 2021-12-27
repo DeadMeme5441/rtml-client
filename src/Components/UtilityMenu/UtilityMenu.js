@@ -15,7 +15,7 @@ const UtilityMenu = () => {
   const searchHandler = () => {
     setSearchTerm(textInput.current.value);
     axios
-      .get("http://localhost:8000/api/search/" + textInput.current.value)
+      .get("http://0.0.0.0:8000/api/search/" + textInput.current.value)
       .then((response) => {
         setSearchResult(response.data.results);
       });
