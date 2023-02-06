@@ -12,7 +12,7 @@ const ProjectTree = () => {
 
   React.useEffect(() => {
     if (uploaded === true) {
-      axios.get("http://13.233.94.116:8000/files").then((response) => {
+      axios.get("http://107.155.65.56:8000/files").then((response) => {
         myContext.setFiles(response.data.files);
       });
       setUploaded(false);
