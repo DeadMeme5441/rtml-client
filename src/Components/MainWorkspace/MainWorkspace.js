@@ -15,7 +15,7 @@ const MainWorkspace = () => {
 
   React.useEffect(() => {
     if (myContext.currentFile !== null) {
-      const url = "http://localhost:8000/api/" + myContext.currentFile;
+      const url = "/api/" + myContext.currentFile;
       axios.get(url).then((response) => {
         setFileData(response.data);
         myContext.setFileObj(response.data);
