@@ -8,13 +8,12 @@ const FileObject = ({ fileName }) => {
 
   const fileHandler = (e) => {
     myContext.setCurrentFile(fileName);
-    const url = "http://107.155.65.56:8000/setfile/" + fileName;
-    axios.post(url).then((response) => {
-    });
+    const url = "http://localhost:8000/setfile/" + fileName;
+    axios.post(url).then((response) => {});
   };
 
   const deleteFile = () => {
-    const url = "http://107.155.65.56:8000/api/delete/" + myContext.currentFile;
+    const url = "http://localhost:8000/api/delete/" + myContext.currentFile;
     axios.get(url).then((response) => {
       console.log(response.data);
     });
